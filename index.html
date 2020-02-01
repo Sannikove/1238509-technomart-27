@@ -12,7 +12,11 @@
       <a>
         <img src="img/logo-technomart.svg" width="110" height="18" alt="Логотип магазина «Техномарт»">
       </a>
-      <!--здесь будет форма поиска-->
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <input type="search" id="search-field" placeholder="Поиск:" >
+        <button type="submit"></button> 
+        <label for="search-field" class="visually-hidden">Форма поиска</label>
+      </form>
       <a href="#">Закладки</a>
       <a href="#">Корзина</a>
       <a href="#">Оформить заказ</a>
@@ -73,8 +77,41 @@
           <img src="img/map.png" width="300" height="158" alt="Изображение карты">
         </a>
       </p>
+      <p>
       <a href="">Заблудились? Напишите нам!</a>
       </p>
+    </section>
+    <section>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+          <p>
+            <img src="img/map-big.jpg" width="940" height="446" 
+            alt="Мы находимся по адресу ул.Большая Конюшенная. д.19/8">
+          </p>
+          <button type="button" class="visually-hidden">Закрыть</button>
+    </section>
+    <section>
+      <h2 class="visually-hidden">Свяжитесь с нами</h2>
+      <form action="https://echo.htmlacademy.ru" method="post" >
+        <p>
+          <label>
+          Ваше имя:
+          <input type="text" name="name" placeholder="Имя Фамилия">
+        </label>
+        </p>
+        <p>
+          <label>
+            Ваш e-mail:
+            <input type="email" name="mail" placeholder="email@example.com">
+          </label>
+        </p>
+        <p>
+          <label for="message">Текст письма:</label>
+          <textarea id="message" rows="5" cols="40" name="message">В свободной форме
+          </textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="visually-hidden" type="button">Закрыть</button>
     </section>
   </main>
   <footer>

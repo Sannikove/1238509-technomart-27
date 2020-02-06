@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    padding: 0;
+  
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #000000;
+    background-color: #ffffff;
+  }
+  a {
+    text-decoration: none;
+  }
+  .header{
+      background-color: #f4f7f9;
+  }
+  .header-top {
+      font-size: 17px;
+      line-height: 18px;
+      color: #ffffff;
+      background-color: #293449;
+  }
+  .header-top input{
+      font: inherit;
+      background-color: transparent;
+      border: none;
+      color: #ffffff;
+  }
+  .header-top input:hover{
+      background-color: #212a3a;
+  }
+  .header-top input:focus{
+    background-color: #ffffff;
+    color: #000000;
+}
+.header-top input::placeholder{
+    color:#ffffff;
+}
+  .bookmarks,
+  .basket{
+      color: #ffffff;
+  }
+  .bookmarks:hover,
+  .basket:hover {
+      background-color: #212a3a;
+  }
+  .bookmarks:focus,
+  .basket:focus{
+    background-color: #161d29;
+    color:rgba(255, 255, 255, 0.6);
+  }
+  .logo img{
+    background-color: #ee3643;
+}
+.logo img:focus,
+.logo img:hover{
+    background-color: #ca2c37;
+}
+.order{
+    background-color: #63a63e;
+    color: #ffffff;
+}
+.order:hover{
+    background-color: #5fbb2d;
+}
+.order:focus{
+    background-color: #518534;
+    color: rgba(255, 255, 255, 0.5);
+}
+.italic {
+    font-family: "Cuprum-italic";
+    font-size: 16px;
+    line-height: 23px;
+    color: #ee3643;
+}
+.address{
+    font-size: 14px;
+    line-height: 24px;
+    color:#32425c;
+}
+.address  a{
+    font-size: 21px;
+    line-height: 21px;
+    color:#ee3643;
+}
+.auth-form {
+     list-style: none;
+ }
+.auth-form a{
+    font-size: 21px;
+    line-height: 21px;
+    color:#000000;
+    background-color: #ffffff;
+}
+.auth-form a:hover{
+    color: #ee3643;
+}
+.auth-form a:focus{
+    color: rgba(0, 0, 0, 0.3);
+}
+.main-navigation{
+    font-size: 17px;
+    line-height: 17px;
+    color: #ffffff;
+    background-color: #32425c;
+}
+.main-navigation ul{
+    list-style: none;
+}
+.main-navigation a{
+    color: #ffffff;
+}
+.main-navigation a:hover{
+    background-color: #293449;
+}
+.main-navigation a:focus{
+  background-color: #1d2739;
+  color:rgba(255, 255, 255, 0.5);
+}
+.about-us h2,
+.contacts h2{
+font-size: 30px;
+line-height: 30px;
+font-weight: normal;
+text-transform: uppercase;
+
+}
+.about-us p,
+.contacts p {
+    font-family: "PT Sans";
+    font-size: 13px;
+    line-height: 24px;
+}
+.about-us ul{
+    list-style: none;
+    font-size: 19px;
+    line-height: 20px;
+}
+.about-us-button,
+.feedback-button {
+    font-family: "Cuprum";
+    font-size: 14px;
+    line-height: 18px;
+    color:#ffffff;
+    background-color: #ee3643;   
+}
+.map-pop-up,
+.feedback-pop-up,
+.basket-pop-up{
+    display: none;
+}
+.footer-top{
+    background-color: #32425c;
+}
+.footer-top a,
+.address-footer{
+    color:#f1f5f7;   
+}
+.footer-top ul{
+    list-style: none;
+}
+.logo-footer{
+    background-color: #ee3643;
+}
+.product-list a{
+    color: #ffd180;
+}
+.footer-top li:hover{
+ text-decoration: underline;
+}
+.footer-top a:focus{
+color: rgba(241, 245, 247, 0.5);
+}
+.product-list a:focus{
+    color:rgba(255, 209, 128, 0.5);
+}
+.footer-bottom{
+    background-color: #293449;
+}
+.copyright{
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+}
+.footer-bottom p{
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+}
+.socials{
+    list-style: none;
+}
+.socials a{
+    color: #ffffff;
+}
+.developer-company a{
+    color: #ffd180;
+}
+.developer-company a:hover{
+    text-decoration: underline;
+}
+.developer-company a:focus{
+    color:#ee3643;
+}
+.login {
+  list-style: none; 
+}
+.login a{
+    font-size: 21px;
+    line-height: 21px;
+    color:#000000;
+    background-color: #ffffff; 
+}
+.login a:focus{
+    color:rgba(0, 0, 0, 0.3);
+}
+.user-menu{
+    list-style: none;
+}
+.user-menu a{
+    font-size: 16px;
+    color: #32425c;
+    text-decoration: underline;
+}
+.user-menu a:hover{
+    color: #ee3643;
+}
+.user-menu a:focus{
+    color: rgba(50, 66, 92, 0.3);
+}
+.breadcrumbs{
+    list-style: none;
+}
+.breadcrumbs a,
+.breadcrumbs li{
+    font-family: "PT Sans";
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+    text-transform: uppercase;
+}
+.title{
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 30px;
+    color: #32425c;
+    text-transform: uppercase;
+    background-color: #f2f6f8;
+}
+.filter fieldset{
+    border:none;
+}
+.filter legend{
+  font-family: "PtSans-bold";  
+   font-size: 17px;
+   line-height: 30px; 
+   text-transform: uppercase;
+}
+.filter ul{
+    list-style: none;
+    font-family: "PT Sans";
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.filter-input:disabled + label {
+  color:rgba(0, 0, 0, 0.4);
+}
+.show-products{
+    font-family: "Pt Sans";
+    font-size: 13px;
+    line-height: 18px;
+    background-color: #ffffff;
+}
+.catalog-list {
+    list-style: none;
+  }
+  .catalog-item{
+      background-color: #ffffff;
+  }
+  .catalog-item:hover {
+    box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+  }
+  .catalog-item-title {
+    color: #000000;
+  }
+  .catalog-item h3 {
+    font-family: "PTSans-bold";
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .catalog-item-price {
+      font-family:"PTSans-bold" ;
+    font-size: 17px;
+    line-height: 18px;
+    color:#ffffff;
+  }
+  .catalog-item-price span:last-child{
+      background-color:#ee3643;;
+  }
+
+  .line-through{
+      text-decoration: line-through;
+      color:#999999;
+      background-color: none;
+  }
+.buy{
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #63a63e;
+    color: #ffffff;
+}
+.in-bookmarks{
+    font-size: 14px;
+    line-height: 18px;
+    color: #32425c;
+}
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+  

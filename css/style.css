@@ -45,8 +45,7 @@ a {
 }
 
 .header-top a {
-  display: block;
-  padding: 14px 0px;
+  padding: 12px 0px;
   vertical-align: middle;
 }
 
@@ -73,53 +72,48 @@ a {
   background-color: #ba2732;
 }
 
-.container .search-form {
-  width: 270px;
-  margin-left: 220px;
+.search-form {
   position: relative;
+  margin-left: 220px;
 }
 
-.header-top input {
-  font: inherit;
-  background-color: transparent;
-  border: none;
-  color: #ffffff;
+.search-form input {
   width: 270px;
   height: 42px;
   padding-left: 50px;
-  position: relative;
-  outline: none;
-}
-
-.header-top button {
-  border: none;
-  outline: none;
-  height: 17px;
-  width: 17px;
-  position: absolute;
-  top: 12px;
-  right: 240px;
-  cursor: pointer;
-  background-color: transparent;
-  z-index: 1;
-  padding: 0px;
-}
-
-.search-form path {
-  opacity: 0.3;
-}
-
-.header-top input:hover {
-  background-color: #212a3a;
-}
-
-.header-top input:focus {
-  background-color: #ffffff;
-  color: #000000;
+  font: inherit;
+  background-color: #293449;
+  border: 0;
 }
 
 .header-top input::placeholder {
   color: #ffffff;
+}
+
+.label-search svg {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  width: 17px;
+  height: 17px;
+  opacity: 0.3;
+  cursor: text;
+}
+
+.search-form input:hover {
+  background-color: #212a3a;
+}
+
+.search-form input:focus {
+  background-color: #ffffff;
+}
+
+.search-form input:hover+svg {
+  opacity: 1;
+}
+
+.search-form input:focus+svg path {
+  fill: #ee3643;
 }
 
 .bookmarks,
@@ -175,6 +169,10 @@ a {
 .bookmarks:focus::before,
 .basket:focus::before {
   opacity: 0.5;
+}
+
+.basket-active {
+  background-color: #ee3643;
 }
 
 .order {
@@ -865,9 +863,10 @@ a {
   top: 0;
   width: 23px;
   height: 23px;
-  background-image: url("../img/checkbox-off.svg");
+  background-image: url("../img/checkbox-off-black.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 20%;
 }
 
 .filter-input-checkbox:checked+label::before {
@@ -877,9 +876,10 @@ a {
   left: -35px;
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-on.svg");
+  background-image: url("../img/checkbox-on-black.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 20%;
 }
 
 .filter-input-radio+label::before {
@@ -889,9 +889,10 @@ a {
   left: -35px;
   width: 25px;
   height: 25px;
-  background-image: url("../img/radio-off.svg");
+  background-image: url("../img/radio-off-black.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 20%;
 }
 
 .filter-input-radio:checked+label::before {
@@ -901,9 +902,10 @@ a {
   left: -35px;
   width: 25px;
   height: 25px;
-  background-image: url("../img/radio-on.svg");
+  background-image: url("../img/radio-on-black.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 20%;
 }
 
 .filter ul {
@@ -918,7 +920,18 @@ a {
 }
 
 .filter-input:disabled+label {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filter-input:disabled+label::before {
+  opacity: 10%;
+}
+
+.filter-input-checkbox:hover+label::before,
+.filter-input-checkbox:checked:hover+label::before,
+.filter-input-radio:hover+label::before,
+.filter-input-radio:checked:hover+label::before {
+  opacity: 40%;
 }
 
 .show-products {
@@ -1097,18 +1110,14 @@ input[type="radio"].visually-hidden {
 
 /* styles for pop-up */
 
-.map-pop-up,
-.feedback-pop-up,
-.basket-pop-up {
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .map-pop-up {
   width: 940px;
-  height: 447px;
-  position: relative;
+  height: 446px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
   box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -1127,7 +1136,12 @@ input[type="radio"].visually-hidden {
   height: 426px;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
   border-top: 7px solid #ee3643;
-  position: relative;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 40;
 }
 
 .feedback-pop-up .name-email {
@@ -1181,7 +1195,9 @@ input[type="radio"].visually-hidden {
   height: 112px;
   background-color: #f1f1f1;
   margin-top: 40px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .feedback-action button {
@@ -1191,10 +1207,6 @@ input[type="radio"].visually-hidden {
   color: white;
   text-transform: uppercase;
   font-size: 14px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 4px;
 }
 
@@ -1213,7 +1225,12 @@ input[type="radio"].visually-hidden {
   height: 278px;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
   border-top: 7px solid #ee3643;
-  position: relative;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 40;
 }
 
 .basket-pop-up h2 {

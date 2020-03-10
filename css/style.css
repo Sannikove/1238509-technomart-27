@@ -1680,12 +1680,9 @@ a {
 .sort-items a {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
+  line-height: 18px;
   color: rgba(0, 0, 0, 0.18);
   text-transform: uppercase;
-  /* text-decoration: underline;
-  text-decoration-color: #ee3643;
-  text-decoration-style: dotted;
-  -webkit-text-decoration: underline #ee3643 dotted; */
   border-bottom: 1px dotted #ee3643;
   display: block;
   padding-top: 7px;
@@ -1693,14 +1690,12 @@ a {
 
 .sort-items a:hover {
   color: black;
-  /* text-decoration: underline;
-  text-decoration-color: #ee3643; */
   border-bottom: 1px solid #ee3643;
 }
 
 .sort-items .active {
   color: #ee3643;
-  text-decoration: none;
+  border-bottom: none;
 }
 
 .sort-triangle-list {
@@ -1728,7 +1723,6 @@ a {
 
 .active-triangle path {
   fill: #ee3643;
-  ;
 }
 
 .catalog-list {
@@ -1989,7 +1983,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   font-weight: normal;
   text-transform: uppercase;
-  padding-bottom: 17px;
+  padding-bottom: 29px;
   padding-top: 68px;
 }
 
@@ -1998,6 +1992,7 @@ input[type="radio"].visually-hidden {
   font-size: 12px;
   line-height: 24px;
   padding-right: 40px;
+  margin:0;
 }
 
 /* styles for pop-up */

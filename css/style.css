@@ -1422,7 +1422,7 @@ a {
 }
 
 .price-scale {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .price-scale h2 {
@@ -2006,7 +2006,6 @@ input[type="radio"].visually-hidden {
 
 .about-drill p {
   font-family: "PT-sans", "Arial", sans-serif;
-  letter-spacing: -0.4px;
   font-size: 13px;
   line-height: 24px;
   margin: 0;
@@ -2023,7 +2022,7 @@ input[type="radio"].visually-hidden {
   z-index: 30;
   -webkit-box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.5);
-  display: none;
+  /* display: none; */
 }
 
 .close-map {
@@ -2048,7 +2047,7 @@ input[type="radio"].visually-hidden {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 40;
-  display: none;
+  /* display: none; */
 }
 
 .feedback-pop-up .name-email {
@@ -2075,7 +2074,8 @@ input[type="radio"].visually-hidden {
 }
 
 .name-email input {
-  padding: 8px 57px 8px 13px;
+  width: 100%;
+  padding: 8px 39px 8px 13px;
   margin-top: 10px;
   color: #a9a9a9;
   font-family: "PT-Sans", "Arial", sans-serif;
@@ -2103,13 +2103,15 @@ input[type="radio"].visually-hidden {
 }
 
 .message textarea {
+  height: 114px;
   color: #a9a9a9;
   font-family: "PT-Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
+  box-sizing: border-box;
   border: 2px solid #dee3e4;
   border-radius: 2px;
-  padding: 8px 0px 12px 13px;
+  padding: 8px 0px 0px 13px;
 }
 
 .feedback-action {
@@ -2133,6 +2135,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+  border:none;
   border-radius: 4px;
 }
 
@@ -2158,7 +2161,7 @@ input[type="radio"].visually-hidden {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 40;
-  display: none;
+  /* display: none; */
 }
 
 .basket-pop-up h2 {
@@ -2167,7 +2170,7 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
   margin: 0;
   position: relative;
-  margin: 66px 125px 0 179px;
+  margin: 66px 0px 0 179px;
 }
 
 .basket-pop-up h2::before {

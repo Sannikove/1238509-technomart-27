@@ -124,7 +124,7 @@ a {
   opacity: 1;
 }
 
-.search-form input:focus+svg path {
+.search-input:focus+svg path {
   fill: #ee3643;
 }
 
@@ -586,6 +586,14 @@ a {
   display: none;
 }
 
+.first-slide-hide {
+  display: none;
+}
+
+.menu-slider .second-slide-show {
+  display: block;
+}
+
 .indicator {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -882,7 +890,6 @@ a {
   background-image: url("../img/delivery.png");
   background-repeat: no-repeat;
   background-position: 100% 100%;
-  /* display: none; */
 }
 
 .guarantee-slide {
@@ -902,6 +909,18 @@ a {
   background-position: 100% 100%;
   display: none;
 }
+
+.service-slider .delivery-slide-hide {
+  display: none;
+}
+
+
+.service-slider .guarantee-slide-show,
+.service-slider .credit-slide-show {
+  display: block;
+}
+
+
 
 .index-columns {
   min-height: 455px;
@@ -1136,10 +1155,12 @@ a {
 
 .right-wrapper a:focus {
   color: rgba(241, 245, 247, 0.5);
+  text-decoration: none;
 }
 
 .product-list a:focus {
   color: rgba(255, 209, 128, 0.5);
+  text-decoration: none;
 }
 
 .footer-bottom {
@@ -2025,7 +2046,7 @@ input[type="radio"].visually-hidden {
   z-index: 30;
   -webkit-box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.5);
-  /* display: none; */
+  display: none;
 }
 
 .close-map {
@@ -2050,7 +2071,38 @@ input[type="radio"].visually-hidden {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 40;
-  /* display: none; */
+  display: none;
+}
+
+.feedback-pop-up-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+.feedback-pop-up-hide {
+  animation-name: bounce-reverse;
+  animation-duration: 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -2000px);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes bounce-reverse {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -2000px);
+  }
 }
 
 .feedback-pop-up .name-email {
@@ -2086,6 +2138,14 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   border: 2px solid #dee3e4;
   border-radius: 4px;
+}
+
+.name-email input:hover {
+  border: 2px solid #b5b5b5;
+}
+
+.name-email input:focus {
+  border: 2px solid #ee3643;
 }
 
 .message {
@@ -2138,7 +2198,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
-  border:none;
+  border: none;
   border-radius: 4px;
 }
 
@@ -2150,6 +2210,34 @@ input[type="radio"].visually-hidden {
   background-color: transparent;
   padding: 0px;
   cursor: pointer;
+}
+
+.feedback-pop-up-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-51%, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-49%, -50%);
+  }
 }
 
 .basket-pop-up {
@@ -2164,7 +2252,13 @@ input[type="radio"].visually-hidden {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 40;
-  /* display: none; */
+  display: none;
+}
+
+.basket-pop-up-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
 }
 
 .basket-pop-up h2 {

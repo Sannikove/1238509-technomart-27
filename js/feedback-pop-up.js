@@ -35,8 +35,9 @@ close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("feedback-pop-up-hide");
   popup.classList.remove("feedback-pop-up-error");
-  popup.classList.remove("feedback-pop-up-show");
-  //   setTimeout (popup.classList.remove("feedback-pop-up-show"),6000);
+  setTimeout(function () {
+    popup.classList.remove("feedback-pop-up-show");
+  }, 600);
 })
 
 form.addEventListener("submit", function (evt) {
@@ -57,8 +58,10 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     if (popup.classList.contains("feedback-pop-up-show")) {
       popup.classList.add("feedback-pop-up-hide");
-      popup.classList.remove("feedback-pop-up-show");
       popup.classList.remove("feedback-pop-up-error");
+      setTimeout(function () {
+        popup.classList.remove("feedback-pop-up-show");
+      }, 600);
     }
   }
 });
